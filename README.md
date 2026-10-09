@@ -49,7 +49,7 @@ Then open `http://localhost:8000`. ES modules do not load from `file://`.
 node --test tests/*.test.mjs
 ```
 
-16 tests on node 22 or newer, nothing to install. The core one replays a real BTC/USD snapshot and the 600 updates that followed it (captured in `tests/fixtures/`) and checks every checksum. Others show that a one unit size error or the wrong precision breaks the checksum, that skipping truncation lets stale levels pile up, that a corrupted update triggers a resync, that hand built order flow cases match the paper's definition, that the regression recovers a known impact, and that realized volatility matches a random walk of known variance.
+18 tests on node 22 or newer, nothing to install; two of them cover the shared duration formatting. The core one replays a real BTC/USD snapshot and the 600 updates that followed it (captured in `tests/fixtures/`) and checks every checksum. Others show that a one unit size error or the wrong precision breaks the checksum, that skipping truncation lets stale levels pile up, that a corrupted update triggers a resync, that hand built order flow cases match the paper's definition, that the regression recovers a known impact, and that realized volatility matches a random walk of known variance.
 
 ## Layout
 
